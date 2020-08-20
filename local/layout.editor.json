@@ -87,7 +87,7 @@
         "game-window"
       ]
     },
-    "window-1597903521247": {}
+    "window-1597922165767": {}
   },
   "panels": {
     "project-settings": {
@@ -101,9 +101,17 @@
       "y": 154,
       "width": 864,
       "height": 673
+    },
+    "builder": {
+      "x": 697,
+      "y": 167,
+      "width": 500,
+      "height": 722
     }
   },
   "panelLabelWidth": {
-    "inspector": "43.9024%"
+    "inspector": "43.9024%",
+    "builder": null,
+    "project-settings": null
   }
 }

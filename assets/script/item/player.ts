@@ -6,13 +6,24 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class ItemPlayer extends cc.Component {
 
+    @property(cc.SpriteFrame)
+    jumpFrame: cc.SpriteFrame
+
+    @property
+    speed: number = 300;
+
+    defaultFrame: cc.SpriteFrame
+
     isJump: boolean = false;
 
     onLoad() {
-        // this.node.on(cc.Node.EventType.TOUCH_START, this.jump, this);
-        const seq = cc.repeatForever(cc.sequence(cc.scaleTo(0.2, 1.3, 1), cc.scaleTo(0.2, 1, 1)));
-        this.node.runAction(seq);
+        // const seq = cc.repeatForever(cc.sequence(cc.scaleTo(0.2, 1.3, 1), cc.scaleTo(0.2, 1, 1)));
+        // this.node.runAction(seq);
         this.node.on("onJump", this.onJump, this);
+        const sprite = this.node.getComponent(cc.Sprite);
+        this.defaultFrame = sprite.spriteFrame;
+        // 设置图像翻转
+        sprite.spriteFrame.setFlipX(true);
     }
 
     onDestroy() {
@@ -24,22 +35,27 @@ export default class ItemPlayer extends cc.Component {
             const rg = this.node.getComponent(cc.RigidBody);
             const lv = rg.linearVelocity;
             lv.y = 900;
+            lv.x = 300;
             rg.linearVelocity = lv;
         }
     }
 
     update() {
-        const rg = this.node.getComponent(cc.RigidBody);
-        const lv = rg.linearVelocity;
-        lv.x = 300;
-        rg.linearVelocity = lv;
+        if (this.isJump) {
+            const rg = this.node.getComponent(cc.RigidBody);
+            const lv = rg.linearVelocity;
+            lv.x = 300;
+            rg.linearVelocity = lv;
+        }
     }
 
     onBeginContact(contact: cc.PhysicsContact, selfCollider: cc.PhysicsBoxCollider, otherCollider: cc.PhysicsBoxCollider) {
         const target = otherCollider.node.group;
+        const sprite = this.node.getComponent(cc.Sprite);
         switch (target) {
             case "ground":
                 this.isJump = true;
+                sprite.spriteFrame = this.defaultFrame;
                 break;
             case "obstacle":
                 this.death();
@@ -51,13 +67,14 @@ export default class ItemPlayer extends cc.Component {
     }
 
     death() {
-        logger.debug("Player死亡");
         this.node.parent.emit("player.death");
         this.node.destroy();
     }
 
     onEndContact(contact: cc.PhysicsContact, selfCollider: cc.PhysicsBoxCollider, otherCollider: cc.PhysicsBoxCollider) {
         if (otherCollider.node.group === "ground") {
+            const sprite = this.node.getComponent(cc.Sprite);
+            sprite.spriteFrame = this.jumpFrame;
             this.isJump = false;
         }
     }

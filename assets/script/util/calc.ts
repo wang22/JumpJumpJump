@@ -6,7 +6,37 @@ const xRow = 240;
 let xCol = 0;
 const yRow = 120;
 let yCol = 0;
+
 let isInit = false;
+
+function initial() {
+    xCol = cc.winSize.width / xRow;
+    yCol = cc.winSize.height / xRow;
+    isInit = true;
+    console.log(xCol, yCol);
+}
+
+function calcX(size: number | string): number {
+    if (!isInit) {
+        initial()
+    }
+    if ((<string>size).trim !== undefined) {
+        return xCol * (xRow * (parseInt((<string>size)) * 0.01));
+    } else {
+        return xCol * (<number>size);
+    }
+}
+
+function calcY(size: number | string): number {
+    if (!isInit) {
+        initial()
+    }
+    if ((<string>size).trim !== undefined) {
+        return yCol * (yRow * (parseInt((<string>size)) * 0.01));
+    } else {
+        return yCol * (<number>size);
+    }
+}
 
 /**
  * 根据屏幕，计算长度
@@ -14,15 +44,14 @@ let isInit = false;
  */
 function calcSize(size: number | string, coor: string): number {
     if (!isInit) {
-        xCol = cc.winSize.width / xRow;
-        yCol = cc.winSize.width / xRow;
+        initial()
     }
     if (coor === "x") {
         if ((<string>size).trim !== undefined) {
             return xCol * (xRow * (parseInt((<string>size)) * 0.01));
         } else {
             return xCol * (<number>size);
-        }   
+        }
     } else {
         if ((<string>size).trim !== undefined) {
             return yCol * (yRow * (parseInt((<string>size)) * 0.01));
@@ -51,5 +80,7 @@ function resize(width: number | string, height: number | string, node: cc.Node) 
 
 export {
     calcSize,
-    resize
+    resize,
+    calcX,
+    calcY
 }

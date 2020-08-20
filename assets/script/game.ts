@@ -1,5 +1,5 @@
 import logger from './util/log';
-import { resize } from './util/calc';
+import { resize, calcX, calcY } from './util/calc';
 
 const { ccclass, property } = cc._decorator;
 
@@ -33,21 +33,27 @@ export default class Game extends cc.Component {
     loadItem() {
         cc.resources.load("prefab/ground", (err, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
-            resize("60%", 40, node);
+            resize(240, 36, node);
             node.parent = this.node;
-            node.setPosition(-10, 50);
+            node.setPosition(0, 69);
+
 
             const node1 = cc.instantiate(prefab);
-            resize("60%", 40, node1);
+            resize(66, 56, node1);
             node1.parent = this.node;
-            node1.setPosition(700, 50);
+            node1.setPosition(calcX(72), calcY(143));
+
+            // const node1 = cc.instantiate(prefab);
+            // resize("60%", 40, node1);
+            // node1.parent = this.node;
+            // node1.setPosition(700, 50);
         });
-        cc.resources.load("prefab/spikesGround", (err, prefab: cc.Prefab) => {
-            const node = cc.instantiate(prefab);
-            resize("30%", 40, node);
-            node.parent = this.node;
-            node.setPosition(500, 10);
-        });
+        // cc.resources.load("prefab/spikesGround", (err, prefab: cc.Prefab) => {
+        //     const node = cc.instantiate(prefab);
+        //     resize("30%", 40, node);
+        //     node.parent = this.node;
+        //     node.setPosition(500, 10);
+        // });
         this.createPlayer();
         cc.resources.load("prefab/spikes", (err, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
@@ -60,7 +66,7 @@ export default class Game extends cc.Component {
     createPlayer() {
         cc.resources.load("prefab/player", (err, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
-            resize(12, 6.6, node);
+            resize(15, 12, node);
             node.setPosition(10, 300);
             node.parent = this.node;
             this.playerNode = node;

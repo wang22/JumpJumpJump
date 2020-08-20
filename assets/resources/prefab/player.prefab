@@ -95,10 +95,10 @@
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
       }
     ],
-    "_srcBlendFactor": 770,
+    "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "3180d80e-0b4e-4c26-8004-84d63a0fef88"
+      "__uuid__": "3a0eaa3b-4da4-4a4d-a890-a4c4d32f68ea"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -122,6 +122,10 @@
       "__id__": 1
     },
     "_enabled": true,
+    "jumpFrame": {
+      "__uuid__": "3a0eaa3b-4da4-4a4d-a890-a4c4d32f68ea"
+    },
+    "speed": 300,
     "_id": ""
   },
   {
