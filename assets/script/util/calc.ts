@@ -13,7 +13,6 @@ function initial() {
     xCol = cc.winSize.width / xRow;
     yCol = cc.winSize.height / xRow;
     isInit = true;
-    console.log(xCol, yCol);
 }
 
 function calcX(size: number | string): number {

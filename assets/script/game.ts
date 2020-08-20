@@ -66,9 +66,9 @@ export default class Game extends cc.Component {
     createPlayer() {
         cc.resources.load("prefab/player", (err, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
-            resize(15, 12, node);
             node.setPosition(10, 300);
             node.parent = this.node;
+            node.emit("initNode", 15, 15*0.55);
             this.playerNode = node;
         });
     }
