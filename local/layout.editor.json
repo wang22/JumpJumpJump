@@ -18,23 +18,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 613.15625,
+                "height": 572.765625,
                 "type": "panel",
-                "width": 209
+                "width": 358
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 312.84375,
+                "height": 400.234375,
                 "type": "panel",
-                "width": 209
+                "width": 358
               }
             ],
-            "height": 929,
+            "height": 976,
             "type": "dock-v",
-            "width": 209
+            "width": 358
           },
           {
             "active": 0,
@@ -42,9 +42,9 @@
               "inspector",
               "cocos-services"
             ],
-            "height": 929,
+            "height": 976,
             "type": "panel",
-            "width": 311.984375
+            "width": 351
           },
           {
             "children": [
@@ -53,25 +53,25 @@
                 "children": [
                   "scene"
                 ],
-                "height": 648.609375,
+                "height": 503.03125,
                 "type": "panel",
-                "width": 1153.015625
+                "width": 1179.984375
               },
               {
-                "active": 0,
+                "active": 1,
                 "children": [
                   "console",
                   "timeline",
                   "game-window"
                 ],
-                "height": 277.390625,
+                "height": 469.96875,
                 "type": "panel",
-                "width": 1153.015625
+                "width": 1179.984375
               }
             ],
-            "height": 929,
+            "height": 976,
             "type": "dock-v",
-            "width": 1153.015625
+            "width": 1179.984375
           }
         ],
         "type": "dock-h"
@@ -86,14 +86,15 @@
         "timeline",
         "game-window"
       ]
-    }
+    },
+    "window-1597903521247": {}
   },
   "panels": {
     "project-settings": {
-      "x": 667,
-      "y": 267,
-      "width": 600,
-      "height": 564
+      "x": 25,
+      "y": 23,
+      "width": 1895,
+      "height": 1057
     },
     "sprite-editor": {
       "x": 377,
