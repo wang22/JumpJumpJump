@@ -51,7 +51,7 @@ export default class ItemPlayer extends cc.Component {
             const rg = this.node.getComponent(cc.RigidBody);
             const lv = rg.linearVelocity;
             lv.y = 900;
-            lv.x = 300;
+            lv.x = this.speed;
             rg.linearVelocity = lv;
         }
     }
@@ -60,7 +60,7 @@ export default class ItemPlayer extends cc.Component {
         if (this.isJump) {
             const rg = this.node.getComponent(cc.RigidBody);
             const lv = rg.linearVelocity;
-            lv.x = 300;
+            lv.x = this.speed;
             rg.linearVelocity = lv;
         }
     }

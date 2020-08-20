@@ -6,6 +6,10 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class Game extends cc.Component {
 
+
+    @property(cc.Label)
+    deathCounterLabel: cc.Label
+
     /**
      * 玩家节点
      */
@@ -33,9 +37,9 @@ export default class Game extends cc.Component {
     loadItem() {
         cc.resources.load("prefab/ground", (err, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
-            resize(240, 36, node);
+            resize("110%", 36, node);
             node.parent = this.node;
-            node.setPosition(0, 69);
+            node.setPosition(-10, 69);
 
 
             const node1 = cc.instantiate(prefab);
@@ -64,11 +68,12 @@ export default class Game extends cc.Component {
     }
 
     createPlayer() {
+        this.deathCounterLabel.node.emit("death.counter.update");
         cc.resources.load("prefab/player", (err, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
-            node.setPosition(10, 300);
+            node.setPosition(1, calcY("100%"));
             node.parent = this.node;
-            node.emit("initNode", 15, 15*0.55);
+            node.emit("initNode", 15, 15 * 0.55);
             this.playerNode = node;
         });
     }

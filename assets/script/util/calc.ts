@@ -4,14 +4,14 @@
 
 const xRow = 240;
 let xCol = 0;
-const yRow = 120;
+const yRow = 240;
 let yCol = 0;
 
 let isInit = false;
 
 function initial() {
     xCol = cc.winSize.width / xRow;
-    yCol = cc.winSize.height / xRow;
+    yCol = cc.winSize.height / yRow;
     isInit = true;
 }
 
