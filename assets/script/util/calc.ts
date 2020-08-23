@@ -92,6 +92,13 @@ function resizeItem (width: number | string, height: number | string, node: cc.N
         collider.offset.y = Math.ceil(node.height / 2 + 1);
         collider.apply();
     }
+    const boxCollider = node.getComponent(cc.BoxCollider);
+    if (boxCollider) {
+        boxCollider.size.width = node.width;
+        boxCollider.size.height = node.height;
+        boxCollider.offset.x = Math.ceil(node.width / 2);
+        boxCollider.offset.y = Math.ceil(node.height / 2 + 1);
+    }
 }
 
 export {

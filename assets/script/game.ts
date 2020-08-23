@@ -29,7 +29,7 @@ export default class Game extends cc.Component {
     /**
      * 当前关卡
      */
-    currentLevelIndex: number = 3;
+    currentLevelIndex: number = 5;
 
     /**
      * 关卡数据
@@ -47,9 +47,6 @@ export default class Game extends cc.Component {
     levelNode: Array<cc.Node> = [];
 
     onLoad() {
-        var collisionMgr = cc.director.getCollisionManager();
-        collisionMgr.enabled = true;
-
         const physicsMgr = cc.director.getPhysicsManager();
         physicsMgr.enabled = true;
         // physicsMgr.debugDrawFlags = 1;
@@ -151,24 +148,37 @@ export default class Game extends cc.Component {
         }
         const obstacles: Array<any> = level.obstacles
         obstacles.forEach(item => {
-            if (item.type === "obstacle_square") {
-                cc.resources.load(`prefab/${item.type}`, (err, prefab: cc.Prefab) => {
-                    const node = cc.instantiate(prefab);
-                    node.parent = this.node;
-                    node.setPosition(calcX(item.x), calcY(item.y));
-                    this.levelNode.push(node); 
-                });
-            } else if (item.type.indexOf("obstacle_spikes") > -1) {
-                cc.resources.load(`prefab/${item.type}`, (err, prefab: cc.Prefab) => {
-                    const node = cc.instantiate(prefab);
+            cc.resources.load(`prefab/${item.type}`, (err: Error, prefab: cc.Prefab) => {
+                const node = cc.instantiate(prefab);
+                let posX =  calcX(item.x);
+                let posY = calcY(item.y);
+                if (item.type.indexOf('obstacle_spikes') > -1) {
                     const width = item.width === xRow ? '110%' : item.width;
-                    const posX = item.width === xRow ? -20 : calcX(item.x);
+                    posX = item.width === xRow ? -20 : calcX(item.x);
                     resize(width, item.height, node);
-                    node.parent = this.node;
-                    node.setPosition(posX, calcY(item.y));
-                    this.levelNode.push(node);
-                });
-            }
+                }
+                node.setPosition(posX, posY);
+                node.parent = this.node;
+                this.levelNode.push(node);
+            })
+            // if (item.type === "obstacle_square") {
+            //     cc.resources.load(`prefab/${item.type}`, (err, prefab: cc.Prefab) => {
+            //         const node = cc.instantiate(prefab);
+            //         node.parent = this.node;
+            //         node.setPosition(calcX(item.x), calcY(item.y));
+            //         this.levelNode.push(node);
+            //     });
+            // } else if (item.type.indexOf("obstacle_spikes") > -1) {
+            //     cc.resources.load(`prefab/${item.type}`, (err, prefab: cc.Prefab) => {
+            //         const node = cc.instantiate(prefab);
+            //         const width = item.width === xRow ? '110%' : item.width;
+            //         const posX = item.width === xRow ? -20 : calcX(item.x);
+            //         resize(width, item.height, node);
+            //         node.parent = this.node;
+            //         node.setPosition(posX, calcY(item.y));
+            //         this.levelNode.push(node);
+            //     });
+            // }
         })
     }
 

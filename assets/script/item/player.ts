@@ -11,6 +11,7 @@ export default class ItemPlayer extends cc.Component {
     @property
     speed: number = 300;
 
+    @property
     jumpForce: number = 900;
 
     defaultFrame: cc.SpriteFrame
@@ -63,10 +64,6 @@ export default class ItemPlayer extends cc.Component {
         }
     }
 
-    onCollisionEnter() {
-        console.log("collider enter");
-    }
-
     onBeginContact(contact: cc.PhysicsContact, selfCollider: cc.PhysicsBoxCollider, otherCollider: cc.PhysicsBoxCollider) {
         const target = otherCollider.node.group;
         const sprite = this.node.getComponent(cc.Sprite);
@@ -83,6 +80,7 @@ export default class ItemPlayer extends cc.Component {
                 break;
             case "score":
                 this.getScore();
+                otherCollider.node.destroy();
                 break;
             case "door":
                 if (!this.isInDoor) {
@@ -92,7 +90,6 @@ export default class ItemPlayer extends cc.Component {
                 break;
         }
     }
-
     death(type: string) {
         this.node.parent.emit("player.death", type);
         this.node.destroy();

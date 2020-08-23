@@ -1,12 +1,12 @@
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class ItemScore extends cc.Component {
 
-    onBeginContact(contact: cc.PhysicsContact, selfCollider: cc.PhysicsBoxCollider, otherCollider: cc.PhysicsBoxCollider) {
-        if (otherCollider.node.group === "player") {
-            this.node.destroy();
-        }
-    }
+    // onCollisionEnter(other: cc.BoxCollider, self: cc.BoxCollider) {
+    //     if (other.node.group === "player") {
+    //         this.node.destroy();
+    //     }
+    // }
 
 }

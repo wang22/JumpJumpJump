@@ -118,6 +118,28 @@
     "_id": ""
   },
   {
+    "__type__": "e5751PxFcBMF5VIwx5+lGtt",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "width": 3.5,
+    "height": 3.5,
+    "_id": ""
+  },
+  {
+    "__type__": "2b177pe+DFGTbtrlKAAu5li",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_id": ""
+  },
+  {
     "__type__": "cc.RigidBody",
     "_name": "",
     "_objFlags": 0,
@@ -127,7 +149,7 @@
     "_enabled": true,
     "_type": 0,
     "_allowSleep": true,
-    "_gravityScale": 0,
+    "_gravityScale": 1,
     "_linearDamping": 0,
     "_angularDamping": 0,
     "_linearVelocity": {
@@ -136,8 +158,8 @@
       "y": 0
     },
     "_angularVelocity": 0,
-    "_fixedRotation": true,
-    "enabledContactListener": true,
+    "_fixedRotation": false,
+    "enabledContactListener": false,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -151,9 +173,9 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 0,
-    "_sensor": false,
-    "_friction": 0,
+    "_density": 1,
+    "_sensor": true,
+    "_friction": 0.2,
     "_restitution": 0,
     "body": null,
     "_offset": {
@@ -166,28 +188,6 @@
       "width": 34,
       "height": 37
     },
-    "_id": ""
-  },
-  {
-    "__type__": "e5751PxFcBMF5VIwx5+lGtt",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "width": 7,
-    "height": 7,
-    "_id": ""
-  },
-  {
-    "__type__": "2b177pe+DFGTbtrlKAAu5li",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
     "_id": ""
   },
   {
