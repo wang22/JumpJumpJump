@@ -77,9 +77,28 @@ function resize(width: number | string, height: number | string, node: cc.Node) 
     }
 }
 
+function resizeItem (width: number | string, height: number | string, node: cc.Node) {
+    if (width !== -1) {
+        node.width = calcSize(width, "x");
+    }
+    if (height !== -1) {
+        node.height = calcSize(height, "x");
+    }
+    const collider = node.getComponent(cc.PhysicsBoxCollider);
+    if (collider) {
+        collider.size.width = node.width;
+        collider.size.height = node.height;
+        collider.offset.x = Math.ceil(node.width / 2);
+        collider.offset.y = Math.ceil(node.height / 2 + 1);
+        collider.apply();
+    }
+}
+
 export {
     calcSize,
     resize,
     calcX,
-    calcY
+    calcY,
+    resizeItem,
+    xRow
 }

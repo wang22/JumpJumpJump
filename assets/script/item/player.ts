@@ -1,5 +1,4 @@
-import { resize, calcX } from "../util/calc";
-import logger from "../util/log"
+import logger from "../util/log";
 
 const { ccclass, property } = cc._decorator;
 
@@ -12,45 +11,44 @@ export default class ItemPlayer extends cc.Component {
     @property
     speed: number = 300;
 
+    jumpForce: number = 900;
+
     defaultFrame: cc.SpriteFrame
 
     isJump: boolean = false;
+
+    isInDoor: boolean = false;
 
     onLoad() {
         // const seq = cc.repeatForever(cc.sequence(cc.scaleTo(0.2, 1.3, 1), cc.scaleTo(0.2, 1, 1)));
         // this.node.runAction(seq);
         // 绑定事件
-        this.node.on("initNode", this.initNode, this);
         this.node.on("onJump", this.onJump, this);
-        const sprite = this.node.getComponent(cc.Sprite);
-        this.defaultFrame = sprite.spriteFrame;
-        // 设置图像翻转
-        sprite.spriteFrame.setFlipX(true);
+        this.node.on("run.direction", this.setDirection, this);
     }
 
     onDestroy() {
         // 注销事件
-        this.node.off("initNode", this.initNode, this);
         this.node.off("onJump", this.onJump, this);
+        this.node.off("run.direction", this.setDirection, this);
     }
 
-    initNode(width: number, height: number) {
-        logger.debug("init player size")
-        this.node.width = calcX(width);
-        this.node.height = calcX(height);
-        const collider = this.node.getComponent(cc.PhysicsBoxCollider);
-        collider.size.width = this.node.width;
-        collider.size.height = this.node.height;
-        collider.offset.x = Math.ceil(this.node.width / 2);
-        collider.offset.y = Math.ceil(this.node.height / 2 + 1);
-        collider.apply();
+    setDirection(direction) {
+        const sprite = this.node.getComponent(cc.Sprite);
+        this.defaultFrame = sprite.spriteFrame;
+        if (direction === "right") {
+            // 设置图像翻转
+            sprite.spriteFrame.setFlipX(true);
+        } else {
+            this.speed = -this.speed;
+        }
     }
 
     onJump() {
         if (this.isJump) {
             const rg = this.node.getComponent(cc.RigidBody);
             const lv = rg.linearVelocity;
-            lv.y = 900;
+            lv.y = this.jumpForce;
             lv.x = this.speed;
             rg.linearVelocity = lv;
         }
@@ -65,6 +63,10 @@ export default class ItemPlayer extends cc.Component {
         }
     }
 
+    onCollisionEnter() {
+        console.log("collider enter");
+    }
+
     onBeginContact(contact: cc.PhysicsContact, selfCollider: cc.PhysicsBoxCollider, otherCollider: cc.PhysicsBoxCollider) {
         const target = otherCollider.node.group;
         const sprite = this.node.getComponent(cc.Sprite);
@@ -74,17 +76,34 @@ export default class ItemPlayer extends cc.Component {
                 sprite.spriteFrame = this.defaultFrame;
                 break;
             case "obstacle":
-                this.death();
+                this.death("dead");
                 break;
             case "wall":
-                this.death();
+                this.death("reset");
+                break;
+            case "score":
+                this.getScore();
+                break;
+            case "door":
+                if (!this.isInDoor) {
+                    this.intoDoor();
+                    this.isInDoor = true;   
+                }
                 break;
         }
     }
 
-    death() {
-        this.node.parent.emit("player.death");
+    death(type: string) {
+        this.node.parent.emit("player.death", type);
         this.node.destroy();
+    }
+
+    getScore() {
+        this.node.parent.emit("player.get.score");
+    }
+
+    intoDoor() {
+        this.node.parent.emit("player.into.door");
     }
 
     onEndContact(contact: cc.PhysicsContact, selfCollider: cc.PhysicsBoxCollider, otherCollider: cc.PhysicsBoxCollider) {
