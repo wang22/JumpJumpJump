@@ -18,23 +18,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 556,
+                "height": 300,
                 "type": "panel",
-                "width": 313
+                "width": 204
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 387,
+                "height": 643,
                 "type": "panel",
-                "width": 313
+                "width": 204
               }
             ],
             "height": 946,
             "type": "dock-v",
-            "width": 313
+            "width": 204
           },
           {
             "active": 0,
@@ -44,7 +44,7 @@
             ],
             "height": 946,
             "type": "panel",
-            "width": 306
+            "width": 304
           },
           {
             "children": [
@@ -55,10 +55,10 @@
                 ],
                 "height": 677,
                 "type": "panel",
-                "width": 1029.984375
+                "width": 1141
               },
               {
-                "active": 1,
+                "active": 0,
                 "children": [
                   "console",
                   "timeline",
@@ -66,12 +66,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 1029.984375
+                "width": 1141
               }
             ],
             "height": 946,
             "type": "dock-v",
-            "width": 1029.984375
+            "width": 1141
           }
         ],
         "type": "dock-h"
@@ -88,29 +88,8 @@
       ]
     }
   },
-  "panels": {
-    "project-settings": {
-      "x": 552,
-      "y": 226,
-      "width": 584,
-      "height": 548
-    },
-    "sprite-editor": {
-      "x": 377,
-      "y": 154,
-      "width": 864,
-      "height": 673
-    },
-    "builder": {
-      "x": 697,
-      "y": 167,
-      "width": 500,
-      "height": 722
-    }
-  },
+  "panels": {},
   "panelLabelWidth": {
-    "inspector": "43.9024%",
-    "builder": null,
-    "project-settings": null
+    "inspector": null
   }
 }

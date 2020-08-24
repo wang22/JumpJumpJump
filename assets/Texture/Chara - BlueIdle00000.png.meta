@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "5983c9a8-f44d-4609-8126-385ed417c691",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 512,
+  "platformSettings": {},
+  "subMetas": {
+    "Chara - BlueIdle00000": {
+      "ver": "1.0.4",
+      "uuid": "d0d807af-5ee5-418a-8cdf-5bd42ea3cc2b",
+      "rawTextureUuid": "5983c9a8-f44d-4609-8126-385ed417c691",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1,
+      "offsetY": -7,
+      "trimX": 178,
+      "trimY": 124,
+      "width": 154,
+      "height": 278,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
