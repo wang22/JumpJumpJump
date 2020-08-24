@@ -29,7 +29,7 @@ export default class Game extends cc.Component {
     /**
      * 当前关卡
      */
-    currentLevelIndex: number = 5;
+    currentLevelIndex: number = 0;
 
     /**
      * 关卡数据
@@ -55,6 +55,7 @@ export default class Game extends cc.Component {
         this.node.on("player.death", this.createPlayer, this);
         this.node.on("player.get.score", this.getScore, this);
         this.node.on("player.into.door", this.intoDoor, this);
+        console.log(cc.director.getPhysicsManager().gravity, "ddd");
         cc.assetManager.loadRemote(this.remoteUrl, (err: Error, data: cc.JsonAsset) => {
             // 获取关卡数据
             this.levelData = data.json;
@@ -161,24 +162,6 @@ export default class Game extends cc.Component {
                 node.parent = this.node;
                 this.levelNode.push(node);
             })
-            // if (item.type === "obstacle_square") {
-            //     cc.resources.load(`prefab/${item.type}`, (err, prefab: cc.Prefab) => {
-            //         const node = cc.instantiate(prefab);
-            //         node.parent = this.node;
-            //         node.setPosition(calcX(item.x), calcY(item.y));
-            //         this.levelNode.push(node);
-            //     });
-            // } else if (item.type.indexOf("obstacle_spikes") > -1) {
-            //     cc.resources.load(`prefab/${item.type}`, (err, prefab: cc.Prefab) => {
-            //         const node = cc.instantiate(prefab);
-            //         const width = item.width === xRow ? '110%' : item.width;
-            //         const posX = item.width === xRow ? -20 : calcX(item.x);
-            //         resize(width, item.height, node);
-            //         node.parent = this.node;
-            //         node.setPosition(posX, calcY(item.y));
-            //         this.levelNode.push(node);
-            //     });
-            // }
         })
     }
 
