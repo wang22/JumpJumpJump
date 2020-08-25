@@ -11,7 +11,7 @@ const {ccclass, property} = cc._decorator;
 export default class NewClass extends cc.Component {
 
     onLoad () {
-        this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 150, 0)));
+        this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 200, 0)));
     }
 
     // showDust () {
