@@ -12,32 +12,60 @@ export default class NewClass extends cc.Component {
     /**
      * 最高可跳跃次数
      */
-    totalJumpCount: number = 2;
+    totalJumpCount: number = 1;
 
     /**
      * 跳跃次数
      */
     jumpCount: number = 0;
 
+    startPosition: cc.Vec3;
+
     onLoad() {
-        this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 100, 0)));
+        this.startPosition = this.node.position;
         this.node.on("jump", this.onJump, this);
+        this.running();
     }
 
     onDestroy() {
         this.node.off("jump", this.onJump, this);
     }
 
+    running() {
+        const anim = this.node.getComponent(cc.Animation);
+        anim.play("player1_run");
+        this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 130, 0)));
+    }
+
+    stopRunning() {
+        this.node.stopAllActions();
+    }
+
+    onCollisionEnter(other: cc.BoxCollider, self: cc.BoxCollider) {
+        const target = other.node.group;
+        switch (target) {
+            case "obstacle":
+                this.reset();
+        }
+    }
+
+    reset () {
+        this.stopRunning();
+        this.node.setPosition(this.startPosition);
+        this.running();
+        this.jumpCount = 0;
+    }
+
     onJump() {
         if (this.totalJumpCount == this.jumpCount) {
-            return ;
+            return;
         }
-        this.jumpCount ++;
+        this.jumpCount++;
         const anim = this.node.getComponent(cc.Animation);
         anim.play("player1_jump");
-        const seq = cc.sequence(cc.jumpBy(0.5, cc.v2(0, 0), 60, 1), cc.callFunc(() => {
+        const seq = cc.sequence(cc.jumpBy(0.5, cc.v2(0, 0), 80, 1), cc.callFunc(() => {
             anim.play("player1_run");
-            this.jumpCount --;
+            this.jumpCount--;
         }))
         this.node.runAction(seq);
     }

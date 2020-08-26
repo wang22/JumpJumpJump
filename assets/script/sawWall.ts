@@ -10,22 +10,16 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class NewClass extends cc.Component {
 
-    @property(cc.Node)
-    playerNode: cc.Node
+    @property(cc.Prefab)
+    sawPrefab: cc.Prefab
 
-    onLoad () {
-        const mgr = cc.director.getCollisionManager();
-        mgr.enabled = true;
-        // mgr.enabledDebugDraw = true;
-        this.node.on(cc.Node.EventType.TOUCH_START, this.onJump, this);
+    onLoad() {
+        const sawCount = Math.ceil(this.node.height/38);
+        for (let i = 0; i < sawCount; i++) {
+            const posY = this.node.height - i * 38;
+            const node = cc.instantiate(this.sawPrefab);
+            node.parent = this.node;
+            node.setPosition(0, posY);
+        }
     }
-
-    onDstroy () {
-        this.node.off(cc.Node.EventType.TOUCH_START, this.onJump, this);
-    }
-
-    onJump () {
-        this.playerNode.emit("jump");
-    }
-
 }

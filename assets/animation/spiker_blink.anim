@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "spiker_blink",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.5333333333333333,
+  "sample": 30,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "927dca9f-83e5-4bf8-89c1-1c31c2e8ebeb"
+            }
+          },
+          {
+            "frame": 0.43333333333333335,
+            "value": {
+              "__uuid__": "df89c69c-e828-43a1-84bf-85887ac28a98"
+            }
+          },
+          {
+            "frame": 0.4666666666666667,
+            "value": {
+              "__uuid__": "dbd6df43-e12d-412b-b847-ce1873a241f2"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "927dca9f-83e5-4bf8-89c1-1c31c2e8ebeb"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
