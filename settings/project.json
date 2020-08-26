@@ -11,6 +11,13 @@
     [
       false,
       true,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
       false
     ]
   ],
@@ -61,7 +68,8 @@
   "group-list": [
     "default",
     "obstacle",
-    "player"
+    "player",
+    "score"
   ],
   "start-scene": "439ea08a-a7cb-40f0-b463-4664e5ecedbf",
   "design-resolution-width": 960,

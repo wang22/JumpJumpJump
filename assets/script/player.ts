@@ -1,7 +1,7 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class ItemPlayer extends cc.Component {
 
     @property(cc.Prefab)
     dustPrefab: cc.Prefab;
@@ -46,6 +46,7 @@ export default class NewClass extends cc.Component {
         switch (target) {
             case "obstacle":
                 this.reset();
+                break;
         }
     }
 
@@ -74,11 +75,13 @@ export default class NewClass extends cc.Component {
         const node = cc.instantiate(this.dustPrefab);
         node.parent = this.node.parent;
         node.setPosition(this.node.position);
-        node.runAction(cc.spawn(
+        node.runAction(cc.sequence(cc.spawn(
             cc.moveBy(0.2, -10, 3),
             cc.scaleBy(0.5, 2),
             cc.fadeOut(0.7)
-        ));
+        ), cc.callFunc(() => {
+            node.destroy();
+        })));
     }
 
     showJumpDust() {
@@ -92,11 +95,13 @@ export default class NewClass extends cc.Component {
             cc.fadeOut(0.7)
         ));
         const left = node.getChildByName("left");
-        left.runAction(cc.spawn(
+        left.runAction(cc.sequence(cc.spawn(
             cc.moveBy(0.2, 7, 3),
             cc.scaleBy(0.5, 1.5),
             cc.fadeOut(0.7)
-        ));
+        ), cc.callFunc(() => {
+            node.destroy();
+        })));
     }
 
 }
