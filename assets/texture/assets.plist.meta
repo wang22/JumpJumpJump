@@ -382,6 +382,28 @@
       "spriteType": "normal",
       "subMetas": {}
     },
+    "Chain.png": {
+      "ver": "1.0.4",
+      "uuid": "e4c3e508-7251-4d43-ba18-cf38ecf1cec4",
+      "rawTextureUuid": "3038a95d-de04-45b2-879f-f7db5ac0f594",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 369,
+      "trimY": 99,
+      "width": 6,
+      "height": 6,
+      "rawWidth": 8,
+      "rawHeight": 8,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "spriteType": "normal",
+      "subMetas": {}
+    },
     "Dust Particle.png": {
       "ver": "1.0.4",
       "uuid": "7a40e5ad-d992-431b-bf25-c6d29217b66c",

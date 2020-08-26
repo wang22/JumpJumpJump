@@ -259,6 +259,21 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
+            <key>Chain.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{6,6}</string>
+                <key>spriteSourceSize</key>
+                <string>{8,8}</string>
+                <key>textureRect</key>
+                <string>{{369,99},{6,6}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
             <key>Dust Particle.png</key>
             <dict>
                 <key>aliases</key>
@@ -2928,7 +2943,7 @@
             <key>size</key>
             <string>{710,126}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c323541af96ebc9799f421ccfb2f86c3:c8f570db97db5a4a4ec72993fe8c09ee:83e187547237f094a69bacbb86d8af03$</string>
+            <string>$TexturePacker:SmartUpdate:685b2a5cbdac37255ca977b72a820d09:6af6a5a54e717a400e1745e10ba40897:83e187547237f094a69bacbb86d8af03$</string>
             <key>textureFileName</key>
             <string>assets.png</string>
         </dict>
