@@ -187,6 +187,29 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">../Items/Fruits/Apple/Apple-0.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-1.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-10.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-11.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-12.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-13.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-14.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-15.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-16.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-2.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-3.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-4.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-5.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-6.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-7.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-8.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-9.png</key>
+            <key type="filename">../Items/Fruits/Collected/score-0.png</key>
+            <key type="filename">../Items/Fruits/Collected/score-1.png</key>
+            <key type="filename">../Items/Fruits/Collected/score-2.png</key>
+            <key type="filename">../Items/Fruits/Collected/score-3.png</key>
+            <key type="filename">../Items/Fruits/Collected/score-4.png</key>
+            <key type="filename">../Items/Fruits/Collected/score-5.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-0.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-1.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-10.png</key>
@@ -199,8 +222,8 @@
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-7.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-8.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-9.png</key>
-            <key type="filename">../Main Characters/Mask Dude/player1_fall.png</key>
-            <key type="filename">../Main Characters/Mask Dude/player1_jump.png</key>
+            <key type="filename">other/player1_fall.png</key>
+            <key type="filename">other/player1_jump.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -215,7 +238,6 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Other/Dust Particle.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-0.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-1.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-10.png</key>
@@ -360,6 +382,7 @@
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-97.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-98.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-99.png</key>
+            <key type="filename">other/Dust Particle.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -374,14 +397,56 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-0.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-1.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-2.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-3.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-4.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-5.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-6.png</key>
+            <key type="filename">../Traps/Saw/saw_on/On (38x38)-7.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,10,19,19</rect>
+                <key>scale9Paddings</key>
+                <rect>10,10,19,19</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../Traps/Spike Head/spiker/spiker-0.png</key>
+            <key type="filename">../Traps/Spike Head/spiker/spiker-1.png</key>
+            <key type="filename">../Traps/Spike Head/spiker/spiker-2.png</key>
+            <key type="filename">../Traps/Spike Head/spiker/spiker-3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>14,13,27,26</rect>
+                <key>scale9Paddings</key>
+                <rect>14,13,27,26</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileList</key>
         <array>
             <filename>../Main Characters/Mask Dude/Run (32x32)</filename>
             <filename>../Terrain/Terrain (16x16)</filename>
-            <filename>../Other/Dust Particle.png</filename>
-            <filename>../Main Characters/Mask Dude/player1_fall.png</filename>
-            <filename>../Main Characters/Mask Dude/player1_jump.png</filename>
+            <filename>other</filename>
+            <filename>../Traps/Saw/saw_on</filename>
+            <filename>../Traps/Spike Head/spiker</filename>
+            <filename>../Items/Fruits/Apple</filename>
+            <filename>../Items/Fruits/Collected</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
