@@ -199,6 +199,8 @@
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-7.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-8.png</key>
             <key type="filename">../Main Characters/Mask Dude/Run (32x32)/Run (32x32)-9.png</key>
+            <key type="filename">../Main Characters/Mask Dude/player1_fall.png</key>
+            <key type="filename">../Main Characters/Mask Dude/player1_jump.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -213,6 +215,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../Other/Dust Particle.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-0.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-1.png</key>
             <key type="filename">../Terrain/Terrain (16x16)/Terrain (16x16)-10.png</key>
@@ -376,6 +379,9 @@
         <array>
             <filename>../Main Characters/Mask Dude/Run (32x32)</filename>
             <filename>../Terrain/Terrain (16x16)</filename>
+            <filename>../Other/Dust Particle.png</filename>
+            <filename>../Main Characters/Mask Dude/player1_fall.png</filename>
+            <filename>../Main Characters/Mask Dude/player1_jump.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
