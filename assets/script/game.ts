@@ -5,31 +5,39 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import ObjectFactory from "./objects/objects";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Game extends cc.Component {
+
+    @property(cc.Node)
+    activeNode: cc.Node = null;
+
+    LevelData: Array<any>
+
+    currentLevel: number = 0;
+
+    objectFactory: ObjectFactory = new ObjectFactory();
 
     onLoad() {
-        // //获取视图的大小，以点为单位
-        // let winSize=cc.director.getWinSize();
-        // //获取视图的大小，以像素为单位
-        // let winSizePixels=cc.director.getWinSizeInPixels();
-        // // console.log(winSize, winSizePixels)
-        // const width = cc.winSize.width;
-        // const height = cc.winSize.height;
-        // const scale = height/width;
-        // this.node.width = cc.winSize.width * scale;
-        // this.node.height = cc.winSize.height * scale;
-        // console.log(this.node.width, this.node.height, scale);
-        
-        console.log(cc.winSize);
-        console.log(this.node.width, this.node.height);
-        console.log(cc.director.getWinSizeInPixels());
-        console.log(cc.Canvas.instance.designResolution);
-        
-        
-        
+        const remoteURL = "http://localhost:1323/static/level.json";
+        cc.assetManager.loadRemote(remoteURL, (err: Error, jsonData: cc.JsonAsset) => {
+            this.LevelData = jsonData.json;
+            this.nextLevel();
+        })
+    }
+
+    nextLevel() {
+
+        const level = this.LevelData[this.currentLevel];
+        if (level.objects) {
+            for (let i = 0; i < level.objects.length; i++) {
+                const obj = level.objects[i];
+                this.objectFactory.build(obj.name, obj);
+            }
+        }
     }
 
 }
