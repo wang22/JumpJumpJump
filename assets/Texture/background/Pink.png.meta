@@ -1,10 +1,10 @@
 {
   "ver": "2.3.5",
-  "uuid": "f68fc6af-6bf1-4eb6-8c6a-c963d50a5386",
+  "uuid": "fca51a0d-1338-489a-94e9-0883acb640e9",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
-  "premultiplyAlpha": true,
+  "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
   "width": 64,
@@ -13,8 +13,8 @@
   "subMetas": {
     "Pink": {
       "ver": "1.0.4",
-      "uuid": "e2b43231-e25f-46ff-bf3d-da162c72d844",
-      "rawTextureUuid": "f68fc6af-6bf1-4eb6-8c6a-c963d50a5386",
+      "uuid": "56c3116c-3557-4f9b-89b8-98f690342d57",
+      "rawTextureUuid": "fca51a0d-1338-489a-94e9-0883acb640e9",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

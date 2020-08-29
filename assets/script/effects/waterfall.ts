@@ -11,13 +11,11 @@ const { ccclass, property } = cc._decorator;
 export default class NewClass extends cc.Component {
 
 
-    start() {
-        const startPosition = this.node.position;
-        const _this = this;
-        const seq = cc.repeatForever(cc.sequence(cc.moveBy(25, 0, -this.node.height / 2), cc.callFunc(() => {
-            _this.node.y = startPosition.y;
-        })));
-        this.node.runAction(seq);
+    onLoad() {
+        const seq = cc.sequence(cc.moveBy(15, 0, -this.node.height/3*2), cc.callFunc(() => {
+            this.node.y = 0;
+        }))
+        this.node.runAction(cc.repeatForever(seq));
     }
 
 }

@@ -2,98 +2,34 @@
   "collision-matrix": [
     [
       true
-    ],
-    [
-      false,
-      false,
-      true
-    ],
-    [
-      false,
-      true,
-      false,
-      true
-    ],
-    [
-      false,
-      false,
-      true,
-      false
     ]
   ],
-  "excluded-modules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Button",
-    "Collider",
-    "Dynamic Atlas",
-    "DragonBones",
-    "EditBox",
-    "Graphics",
-    "Geom Utils",
-    "Intersection",
-    "Layout",
-    "Label Effect",
-    "Mask",
-    "Mesh",
-    "MotionStreak",
-    "NodePool",
-    "Native Socket",
-    "Physics",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "ScrollBar",
-    "ScrollView",
-    "Spine Skeleton",
-    "StudioComponent",
-    "Toggle",
-    "TiledMap",
-    "VideoPlayer",
-    "WebView",
-    "3D",
-    "3D Primitive",
-    "SubContext",
-    "TypeScript Polyfill",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle",
-    "SafeArea"
-  ],
+  "excluded-modules": [],
   "group-list": [
-    "default",
-    "obstacle",
-    "player",
-    "score"
+    "default"
   ],
-  "start-scene": "439ea08a-a7cb-40f0-b463-4664e5ecedbf",
+  "start-scene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
   "design-resolution-width": 960,
   "design-resolution-height": 640,
   "fit-width": false,
-  "fit-height": false,
+  "fit-height": true,
   "use-project-simulator-setting": false,
   "simulator-orientation": false,
-  "use-customize-simulator": true,
+  "use-customize-simulator": false,
   "simulator-resolution": {
-    "height": 640,
-    "width": 960
+    "width": 960,
+    "height": 640
   },
-  "last-module-event-record-time": 1598415810901,
+  "last-module-event-record-time": 0,
   "assets-sort-type": "name",
   "facebook": {
-    "appID": "",
-    "audience": {
-      "enable": false
-    },
     "enable": false,
+    "appID": "",
     "live": {
       "enable": false
+    },
+    "audience": {
+      "enable": false
     }
-  },
-  "preview-port": 7456
+  }
 }
