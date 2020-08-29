@@ -314,6 +314,27 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../Main Characters/playerDead/player-dead-0.png</key>
+            <key type="filename">../Main Characters/playerDead/player-dead-1.png</key>
+            <key type="filename">../Main Characters/playerDead/player-dead-2.png</key>
+            <key type="filename">../Main Characters/playerDead/player-dead-3.png</key>
+            <key type="filename">../Main Characters/playerDead/player-dead-4.png</key>
+            <key type="filename">../Main Characters/playerDead/player-dead-5.png</key>
+            <key type="filename">../Main Characters/playerDead/player-dead-6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>24,24,48,48</rect>
+                <key>scale9Paddings</key>
+                <rect>24,24,48,48</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../Terrain/Terrain/terrain-0.png</key>
             <key type="filename">../Terrain/Terrain/terrain-1.png</key>
             <key type="filename">../Terrain/Terrain/terrain-10.png</key>
@@ -510,6 +531,24 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../Traps/Spike Head/obstacle-spike-head/obstacle-spike-head-0.png</key>
+            <key type="filename">../Traps/Spike Head/obstacle-spike-head/obstacle-spike-head-1.png</key>
+            <key type="filename">../Traps/Spike Head/obstacle-spike-head/obstacle-spike-head-2.png</key>
+            <key type="filename">../Traps/Spike Head/obstacle-spike-head/obstacle-spike-head-3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>14,13,27,26</rect>
+                <key>scale9Paddings</key>
+                <rect>14,13,27,26</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileList</key>
         <array>
@@ -525,6 +564,8 @@
             <filename>../Terrain/Terrain</filename>
             <filename>other</filename>
             <filename>../Traps/Saw/saw</filename>
+            <filename>../Main Characters/playerDead</filename>
+            <filename>../Traps/Spike Head/obstacle-spike-head</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

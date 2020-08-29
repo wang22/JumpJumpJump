@@ -30,7 +30,7 @@ export default class ElementPlayer extends cc.Component {
         this.jumpCount++;
         // const anim = this.node.getComponent(cc.Animation);
         // anim.play("player1_jump");
-        const seq = cc.sequence(cc.jumpBy(0.5, cc.v2(0, 0), 60, 1), cc.callFunc(() => {
+        const seq = cc.sequence(cc.jumpBy(0.5, cc.v2(0, 0), 70, 1), cc.callFunc(() => {
             // anim.play("player1_run");
             this.jumpCount--;
         }))

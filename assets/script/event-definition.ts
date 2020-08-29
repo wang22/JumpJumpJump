@@ -1,4 +1,7 @@
 export default {
     OnPlayerCreate: "onPlayerCreate",
-    OnPlayerJump: "onPlayerJump"
+    OnPlayerJump: "onPlayerJump",
+    Obstacle: {
+        SawChainRun: "onRun"
+    }
 }

@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "player",
+    "_name": "saw-chain",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -24,16 +24,10 @@
       },
       {
         "__id__": 3
-      },
-      {
-        "__id__": 4
-      },
-      {
-        "__id__": 5
       }
     ],
     "_prefab": {
-      "__id__": 6
+      "__id__": 4
     },
     "_opacity": 255,
     "_color": {
@@ -45,8 +39,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 26,
-      "height": 30
+      "width": 200,
+      "height": 6
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -57,8 +51,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
-        0,
+        216.016,
+        181.347,
         0,
         0,
         0,
@@ -98,10 +92,10 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "5ee88ee3-a42d-44c5-9c57-ff3f0b181e95"
+      "__uuid__": "fbbce320-4e15-41c8-91cf-2367cc50548f"
     },
-    "_type": 0,
-    "_sizeMode": 1,
+    "_type": 2,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -117,55 +111,15 @@
     "_id": ""
   },
   {
-    "__type__": "e3948w3QehBXLHeNrmWZBhl",
+    "__type__": "384abg7NoZGXaHedj4LbJen",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "runDustPrefab": {
-      "__uuid__": "6ba49df3-aa69-4493-ab2b-676da0baa698"
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Animation",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_defaultClip": {
-      "__uuid__": "cdf9c508-c84f-46b6-80f1-2e55ffba49bf"
-    },
-    "_clips": [
-      {
-        "__uuid__": "cdf9c508-c84f-46b6-80f1-2e55ffba49bf"
-      }
-    ],
-    "playOnLoad": true,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "tag": 0,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 13,
-      "y": 15
-    },
-    "_size": {
-      "__type__": "cc.Size",
-      "width": 26,
-      "height": 30
+    "sawPrefab": {
+      "__uuid__": "95fb8370-741f-4fcd-a473-8b8ca4ca44e7"
     },
     "_id": ""
   },
@@ -175,9 +129,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "320cf1ec-98b8-4645-a8f6-793608346679"
+      "__id__": 0
     },
-    "fileId": "0dJyPM/RJGxbmjwUklVpDf",
+    "fileId": "9acCT7moZJzaWt2cJUke5/",
     "sync": false
   }
 ]
