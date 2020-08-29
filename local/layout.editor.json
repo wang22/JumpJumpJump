@@ -86,9 +86,17 @@
         "timeline",
         "game-window"
       ]
+    },
+    "window-1598695157951": {}
+  },
+  "panels": {
+    "project-settings": {
+      "x": 667,
+      "y": 267,
+      "width": 584,
+      "height": 548
     }
   },
-  "panels": {},
   "panelLabelWidth": {
     "inspector": null
   }

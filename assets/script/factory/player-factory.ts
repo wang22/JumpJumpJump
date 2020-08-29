@@ -1,3 +1,4 @@
+import PrefabFactory from "../event-definition";
 import Factory from './factory';
 
 class PlayerFactory implements Factory {
@@ -8,6 +9,7 @@ class PlayerFactory implements Factory {
             node.height = data.height;
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
+            parentNode.emit(PrefabFactory.OnPlayerCreate, node);
         })
     }
 }
