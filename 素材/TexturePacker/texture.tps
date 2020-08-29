@@ -488,6 +488,28 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../Traps/Saw/saw/saw-on-0.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-1.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-2.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-3.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-4.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-5.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-6.png</key>
+            <key type="filename">../Traps/Saw/saw/saw-on-7.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,10,19,19</rect>
+                <key>scale9Paddings</key>
+                <rect>10,10,19,19</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileList</key>
         <array>
@@ -502,6 +524,7 @@
             <filename>../Main Characters/Virtual Guy/Run (32x32)</filename>
             <filename>../Terrain/Terrain</filename>
             <filename>other</filename>
+            <filename>../Traps/Saw/saw</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
