@@ -194,6 +194,42 @@
             <key type="filename">../Background/Pink.png</key>
             <key type="filename">../Background/Purple.png</key>
             <key type="filename">../Background/Yellow.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-0.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-1.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-2.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-3.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-4.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-5.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-6.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-7.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-8.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flag-ldle/flag-ldle-9.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-0.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-1.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-10.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-11.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-12.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-13.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-14.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-15.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-16.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-17.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-18.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-19.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-2.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-20.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-21.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-22.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-23.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-24.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-25.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-3.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-4.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-5.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-6.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-7.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-8.png</key>
+            <key type="filename">../Items/Checkpoints/Checkpoint/flat-out/flag-out-9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -591,6 +627,8 @@
             <filename>../Traps/Spike Head/obstacle-spike-head</filename>
             <filename>../Items/Fruits/Apple</filename>
             <filename>../Items/Fruits/fruits-boom</filename>
+            <filename>../Items/Checkpoints/Checkpoint/flat-out</filename>
+            <filename>../Items/Checkpoints/Checkpoint/flag-ldle</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
