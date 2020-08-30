@@ -208,6 +208,29 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../Items/Fruits/Apple/Apple-0.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-1.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-10.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-11.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-12.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-13.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-14.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-15.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-16.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-2.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-3.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-4.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-5.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-6.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-7.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-8.png</key>
+            <key type="filename">../Items/Fruits/Apple/Apple-9.png</key>
+            <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-0.png</key>
+            <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-1.png</key>
+            <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-2.png</key>
+            <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-3.png</key>
+            <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-4.png</key>
+            <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-5.png</key>
             <key type="filename">../Main Characters/Mask Dude/Idle (32x32)/mask-dude-ldle-0.png</key>
             <key type="filename">../Main Characters/Mask Dude/Idle (32x32)/mask-dude-ldle-1.png</key>
             <key type="filename">../Main Characters/Mask Dude/Idle (32x32)/mask-dude-ldle-10.png</key>
@@ -566,6 +589,8 @@
             <filename>../Traps/Saw/saw</filename>
             <filename>../Main Characters/playerDead</filename>
             <filename>../Traps/Spike Head/obstacle-spike-head</filename>
+            <filename>../Items/Fruits/Apple</filename>
+            <filename>../Items/Fruits/fruits-boom</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

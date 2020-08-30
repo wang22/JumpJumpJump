@@ -29,13 +29,13 @@ export default class Game extends cc.Component {
         this.node.on(cc.Node.EventType.TOUCH_START, this.jump, this);
         this.node.on(EventDefine.OnPlayerCreate, this.onPlayerCreate, this);
 
-        cc.resources.load("prefab/obstacle/saw-chain", (err: Error, prefab: cc.Prefab) => {
-            const node = cc.instantiate(prefab);
-            node.width = 200;
-            node.setPosition(300, 300);
-            node.parent = this.activeNode;
-            node.emit(EventDefine.Obstacle.SawChainRun, 1);
-        })
+        // cc.resources.load("prefab/obstacle/saw-chain", (err: Error, prefab: cc.Prefab) => {
+        //     const node = cc.instantiate(prefab);
+        //     node.width = 200;
+        //     node.setPosition(300, 300);
+        //     node.parent = this.activeNode;
+        //     node.emit(EventDefine.Obstacle.SawChainRun, 1);
+        // })
     }
 
     onDestroy() {
