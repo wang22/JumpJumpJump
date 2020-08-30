@@ -1,7 +1,8 @@
 import Factory from './factory';
 import EventDefine from '../event-definition';
+import BaseFactory from './base-factory';
 
-class ObstacleFactory implements Factory {
+class ObstacleFactory extends BaseFactory {
     build(data: any, parentNode: cc.Node): void {
         const properties = data.properties;
         if (properties.type === "saw") {
@@ -20,6 +21,7 @@ class ObstacleFactory implements Factory {
             node.height = data.height;
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
+            super.putNode(node);
         })
     }
 
@@ -30,6 +32,7 @@ class ObstacleFactory implements Factory {
             node.height = data.height;
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
+            super.putNode(node);
         })
     }
 
@@ -47,6 +50,7 @@ class ObstacleFactory implements Factory {
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
             node.emit(EventDefine.Obstacle.SawChainRun, 1);
+            super.putNode(node);
         })
     }
 }

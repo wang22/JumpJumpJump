@@ -6,5 +6,9 @@ export default {
     },
     Player: {
         Running: "running"
+    },
+    AccpetEventOffer: "accpetEventOffer",
+    Map: {
+        OnCollisionByPlayer: "onCollisionByPlayer"
     }
 }

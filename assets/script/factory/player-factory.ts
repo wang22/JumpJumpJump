@@ -1,8 +1,9 @@
 import PrefabFactory from "../event-definition";
 import Factory from './factory';
 import EventDefine from '../event-definition';
+import BaseFactory from "./base-factory";
 
-class PlayerFactory implements Factory {
+class PlayerFactory extends BaseFactory {
     build(data: any, parentNode: cc.Node): void {
         const properties = data.properties;
         cc.resources.load("prefab/player", (err: Error, prefab: cc.Prefab) => {
@@ -13,6 +14,7 @@ class PlayerFactory implements Factory {
             node.parent = parentNode;
             node.emit(EventDefine.Player.Running, properties.direction)
             parentNode.emit(PrefabFactory.OnPlayerCreate, node);
+            super.putNode(node);
         })
     }
 }

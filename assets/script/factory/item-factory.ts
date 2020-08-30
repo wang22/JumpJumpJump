@@ -1,6 +1,7 @@
-import Factory from './factory';
+import EventDefine from '../event-definition'
+import BaseFactory from './base-factory';
 
-class ItemFactory implements Factory {
+class ItemFactory extends BaseFactory {
     build(data: any, parentNode: cc.Node): void {
         const properties = data.properties;
         if (properties.type === "apple") {
@@ -17,6 +18,7 @@ class ItemFactory implements Factory {
             node.height = data.height;
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
+            super.putNode(node);
         })
     }
 
@@ -25,6 +27,10 @@ class ItemFactory implements Factory {
             const node = cc.instantiate(prefab);
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
+            if (data.properties.onCollisionByPlayer) {
+                node.emit(EventDefine.AccpetEventOffer, EventDefine.Map.OnCollisionByPlayer, data.properties.onCollisionByPlayer);
+            }
+            super.putNode(node);
         })
     }
 }

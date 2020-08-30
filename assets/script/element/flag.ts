@@ -1,8 +1,11 @@
 import ColliderTag from '../collider-tag';
+import BaseElement from './base-element';
+import EventDefine from '../event-definition'
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class ElementFlag extends cc.Component {
+export default class ElementFlag extends BaseElement {
 
     isCheck: boolean = false;
 
@@ -20,6 +23,7 @@ export default class ElementFlag extends cc.Component {
     flagOut() {
         const anim = this.node.getComponent(cc.Animation);
         anim.play("flag-ldle");
+        super.emitEvent(EventDefine.Map.OnCollisionByPlayer)
     }
 
 }

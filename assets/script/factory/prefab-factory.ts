@@ -14,12 +14,18 @@ class PrefabFactory {
         this.factoryMap.set("item", new ItemFactory());
     }
 
-    
+
     build(name: string, data: any, parentNode: cc.Node): void {
         const factory = this.factoryMap.get(name);
         if (factory) {
             factory.build(data, parentNode);
         }
+    }
+
+    destroyNode() {
+        this.factoryMap.forEach((val, key) => {
+            val.destroyNode();
+        })
     }
 }
 

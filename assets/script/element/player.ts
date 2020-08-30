@@ -84,6 +84,6 @@ export default class ElementPlayer extends cc.Component {
         this.node.stopAllActions();
         this.node.setPosition(this.startPosition);
         this.jumpCount = 0;
-        this.running();
+        this.running(this.runDirection);
     }
 }
