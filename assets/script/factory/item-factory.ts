@@ -5,6 +5,8 @@ class ItemFactory implements Factory {
         const properties = data.properties;
         if (properties.type === "apple") {
             this.buildApple(data, parentNode);
+        } else if (properties.type === "flag") {
+            this.buildFlag(data,parentNode);
         }
     }
 
@@ -13,6 +15,14 @@ class ItemFactory implements Factory {
             const node = cc.instantiate(prefab);
             node.width = data.width;
             node.height = data.height;
+            node.setPosition(data.x, data.y);
+            node.parent = parentNode;
+        })
+    }
+
+    buildFlag(data: any, parentNode: cc.Node) {
+        cc.resources.load("prefab/item/flag", (err: Error, prefab: cc.Prefab) => {
+            const node = cc.instantiate(prefab);
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
         })

@@ -13,14 +13,17 @@ export default class ElementPlayer extends cc.Component {
 
     startPosition: cc.Vec3
 
+    runDirection: string = "right"
+
     onLoad() {
         this.startPosition = this.node.position;
         this.node.on(EventDefine.OnPlayerJump, this.onJump, this);
-        this.running();
+        this.node.on(EventDefine.Player.Running, this.running, this);
     }
 
     onDestroy() {
         this.node.off(EventDefine.OnPlayerJump, this.onJump, this);
+        this.node.off(EventDefine.Player.Running, this.running, this);
     }
 
     onJump() {
@@ -37,21 +40,38 @@ export default class ElementPlayer extends cc.Component {
         this.node.runAction(seq);
     }
 
-    running() {
-        this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 100, 0)));
+    running(direction: string) {
+        this.runDirection = direction;
+        if (direction === "right") {
+            this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 100, 0)));
+        } else {
+            this.node.setScale(-1, 1);
+            this.node.runAction(cc.repeatForever(cc.moveBy(0.5, -100, 0)));
+        }
     }
 
     runComplete() {
         const node = cc.instantiate(this.runDustPrefab);
         node.parent = this.node.parent;
         node.setPosition(this.node.position);
-        node.runAction(cc.sequence(cc.spawn(
-            cc.moveBy(0.2, -10, 3),
-            cc.scaleBy(0.5, 2),
-            cc.fadeOut(0.7)
-        ), cc.callFunc(() => {
-            node.destroy();
-        })));
+        if (this.runDirection === "right") {
+            node.runAction(cc.sequence(cc.spawn(
+                cc.moveBy(0.2, -10, 3),
+                cc.scaleBy(0.5, 2),
+                cc.fadeOut(0.7)
+            ), cc.callFunc(() => {
+                node.destroy();
+            })));
+        } else {
+            node.setScale(-1, 1);
+            node.runAction(cc.sequence(cc.spawn(
+                cc.moveBy(0.2, 10, 3),
+                cc.scaleBy(0.5, 2),
+                cc.fadeOut(0.7)
+            ), cc.callFunc(() => {
+                node.destroy();
+            })));
+        }
     }
 
     onCollisionEnter(other: cc.BoxCollider, self: cc.BoxCollider) {

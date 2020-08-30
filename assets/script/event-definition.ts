@@ -3,5 +3,8 @@ export default {
     OnPlayerJump: "onPlayerJump",
     Obstacle: {
         SawChainRun: "onRun"
+    },
+    Player: {
+        Running: "running"
     }
 }
