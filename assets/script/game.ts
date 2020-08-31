@@ -20,7 +20,7 @@ export default class Game extends cc.Component {
     onLoad() {
         const mgr = cc.director.getCollisionManager();
         mgr.enabled = true;
-        // mgr.enabledDebugDraw = true;
+        mgr.enabledDebugDraw = true;
         const remoteURL = "http://localhost:1323/static/level.json";
         cc.assetManager.loadRemote(remoteURL, (err: Error, jsonData: cc.JsonAsset) => {
             this.LevelData = jsonData.json;

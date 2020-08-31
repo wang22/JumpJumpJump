@@ -26,10 +26,14 @@ class ObstacleFactory extends BaseFactory {
     }
 
     buildSpikeHead(data: any, parentNode: cc.Node) {
-        cc.resources.load("prefab/obstacle/spike-head", (err: Error, prefab: cc.Prefab) => {
+        const properties = data.properties;
+        const prefab = `prefab/obstacle/spike-head${properties.style ? '-' + properties.style : ''}`;
+        console.log(prefab);
+        
+        cc.resources.load(prefab, (err: Error, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
-            node.width = data.width;
-            node.height = data.height;
+            // node.width = data.width;
+            // node.height = data.height;
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
             super.putNode(node);
