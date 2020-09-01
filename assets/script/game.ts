@@ -11,7 +11,7 @@ export default class Game extends cc.Component {
 
     LevelData: Array<any>
 
-    currentLevel: number = 0 ;
+    currentLevel: number = 6;
 
     prefabFactory: PrefabFactory = new PrefabFactory();
 

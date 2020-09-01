@@ -8,6 +8,9 @@ export default class ElementPlayer extends cc.Component {
     @property(cc.Prefab)
     runDustPrefab: cc.Prefab;
 
+    @property(cc.Prefab)
+    runSpeed: number = 100;
+
     totalJumpCount: number = 1;
     jumpCount: number = 0;
 
@@ -43,10 +46,10 @@ export default class ElementPlayer extends cc.Component {
     running(direction: string) {
         this.runDirection = direction;
         if (direction === "right") {
-            this.node.runAction(cc.repeatForever(cc.moveBy(0.5, 100, 0)));
+            this.node.runAction(cc.repeatForever(cc.moveBy(0.5, this.runSpeed, 0)));
         } else {
             this.node.setScale(-1, 1);
-            this.node.runAction(cc.repeatForever(cc.moveBy(0.5, -100, 0)));
+            this.node.runAction(cc.repeatForever(cc.moveBy(0.5, -this.runSpeed, 0)));
         }
     }
 
