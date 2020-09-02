@@ -42,18 +42,27 @@ class ObstacleFactory extends BaseFactory {
 
     buildSawChain(data: any, parentNode: cc.Node) {
         const fixWidth = 6;
+        const properties = data.properties;
         cc.resources.load("prefab/obstacle/saw-chain", (err: Error, prefab: cc.Prefab) => {
             const node = cc.instantiate(prefab);
+            let align = "hr";
             if (data.width > data.height) {
                 node.width = data.width;
                 node.height = fixWidth;
             } else {
+                align = "ve";
                 node.width = fixWidth;
                 node.height = data.height;
             }
+            if (!properties.style) {
+                properties.style = "patrol";
+            }
             node.setPosition(data.x, data.y);
             node.parent = parentNode;
-            node.emit(EventDefine.Obstacle.SawChainRun, 1);
+            node.emit(EventDefine.Obstacle.SawChainRun, {
+                style: properties.style,
+                align
+            });
             super.putNode(node);
         })
     }
