@@ -84,6 +84,7 @@ export default class ElementPlayer extends cc.Component {
     }
 
     reset() {
+        this.node.parent.emit(EventDefine.Player.Death);
         this.node.stopAllActions();
         this.node.setPosition(this.startPosition);
         this.jumpCount = 0;

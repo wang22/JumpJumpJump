@@ -7,3 +7,12 @@ onCollisionByPlayer: 当与Player碰撞时产生的命令
 
 ## 指令
 nextLevel: 进入到下一关
+
+
+# 字体
+## 字体字符
+0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+=-
+## 生成地址
+https://www.iconfont.cn/webfont?spm=a313x.7781068.0.d81ec59f2#!/webfont/index
+## 字体格式
+阿里汉仪智能黑体

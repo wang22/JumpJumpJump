@@ -5,10 +5,14 @@ export default {
         SawChainRun: "onRun"
     },
     Player: {
-        Running: "running"
+        Running: "player.running",
+        Death: "player.death"
     },
     AccpetEventOffer: "accpetEventOffer",
     Map: {
         OnCollisionByPlayer: "onCollisionByPlayer"
+    },
+    DeathCounter: {
+        IncreaseCount: "death.counter.increase.count"
     }
 }
