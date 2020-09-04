@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>4</int>
         <key>texturePackerVersion</key>
-        <string>5.4.0</string>
+        <string>5.3.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -261,6 +261,23 @@
             <key type="filename">../Items/Fruits/Apple/Apple-7.png</key>
             <key type="filename">../Items/Fruits/Apple/Apple-8.png</key>
             <key type="filename">../Items/Fruits/Apple/Apple-9.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-1.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-10.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-11.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-12.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-13.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-14.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-15.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-16.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-17.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-2.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-3.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-4.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-5.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-6.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-7.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-8.png</key>
+            <key type="filename">../Items/Fruits/Bananas/bananas-9.png</key>
             <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-0.png</key>
             <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-1.png</key>
             <key type="filename">../Items/Fruits/fruits-boom/fruits-boom-2.png</key>
@@ -629,6 +646,7 @@
             <filename>../Items/Fruits/fruits-boom</filename>
             <filename>../Items/Checkpoints/Checkpoint/flat-out</filename>
             <filename>../Items/Checkpoints/Checkpoint/flag-ldle</filename>
+            <filename>../Items/Fruits/Bananas</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

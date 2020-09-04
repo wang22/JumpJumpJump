@@ -8,7 +8,7 @@ export default class ElementPlayer extends cc.Component {
     @property(cc.Prefab)
     runDustPrefab: cc.Prefab;
 
-    @property(cc.Prefab)
+    @property
     runSpeed: number = 100;
 
     totalJumpCount: number = 1;
