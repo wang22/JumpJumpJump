@@ -33,6 +33,18 @@ class ItemFactory extends BaseFactory {
             super.putNode(node);
         })
     }
+
+    buildBanana(data: any, parentNode: cc.Node) {
+        cc.resources.load("prefab/item/banana", (err: Error, prefab: cc.Prefab) => {
+            const node = cc.instantiate(prefab);
+            node.setPosition(data.x, data.y);
+            node.parent = parentNode;
+            if (data.properties.onCollisionByPlayer) {
+                node.emit(EventDefine.AccpetEventOffer, EventDefine.Map.OnCollisionByPlayer, data.properties.onCollisionByPlayer);
+            }
+            super.putNode(node);
+        })
+    }
 }
 
 export default ItemFactory;
