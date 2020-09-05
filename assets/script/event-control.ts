@@ -28,9 +28,11 @@ export default class EventControl extends cc.Component {
     }
 
     onCollisionByPlayer(cmd: string) {
-        // 进入下一关
         if (cmd === "nextLevel") {
+            // 进入下一关
             this.node.parent.emit("goNextLevel")
+        } else if (cmd === "speedX15") {
+            // 提升玩家速度
         }
     }
 

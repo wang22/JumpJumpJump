@@ -7,6 +7,7 @@ onCollisionByPlayer: 当与Player碰撞时产生的命令
 
 ## 指令
 nextLevel: 进入到下一关
+speedX15: 玩家速度提升1.5倍
 
 
 # 字体
